@@ -179,6 +179,51 @@ h6,
   margin-bottom: 2rem;
 }
 
+/* Responsive Layout Utilities */
+.w-responsive-60 {
+  width: 100%;
+}
+
+.w-responsive-80 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .w-responsive-60 {
+    width: 60%;
+  }
+  .w-responsive-80 {
+    width: 80%;
+  }
+}
+
+.center-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Consistent Input Styling */
+.input-consistent {
+  height: 58px; /* Match floating label input height */
+  padding: 1rem 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.input-consistent:focus {
+  background-color: #fff;
+  border-color: #2962ff;
+  box-shadow: 0 0 0 4px rgba(41, 98, 255, 0.1);
+  outline: none;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
 /* Mobile Sidebar Utilities */
 .z-index-sidebar {
   z-index: 1050;
@@ -202,7 +247,7 @@ h6,
 }
 
 .nav-link-custom::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -343,7 +388,11 @@ h6,
 }
 
 .applicant-sidebar {
-  background: linear-gradient(180deg, var(--sidebar-bg-navy) 0%, var(--sidebar-bg-navy-dark) 100%) !important;
+  background: linear-gradient(
+    180deg,
+    var(--sidebar-bg-navy) 0%,
+    var(--sidebar-bg-navy-dark) 100%
+  ) !important;
   box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
   border-right: 1px solid var(--sidebar-border);
 }
@@ -364,14 +413,18 @@ h6,
 }
 
 .sidebar-item-active {
-  background: linear-gradient(90deg, rgba(20, 184, 166, 0.2) 0%, rgba(20, 184, 166, 0.05) 100%) !important;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 184, 166, 0.2) 0%,
+    rgba(20, 184, 166, 0.05) 100%
+  ) !important;
   color: var(--sidebar-accent-teal) !important;
   border-left: 3px solid var(--sidebar-accent-teal);
   box-shadow: 0 2px 12px rgba(20, 184, 166, 0.2);
 }
 
 .sidebar-item-active::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -406,7 +459,12 @@ h6,
 
 /* Footer Modern Gradient Enhancements */
 :root {
-  --footer-gradient: linear-gradient(135deg, #475569 0%, #64748b 50%, #3b82f6 100%);
+  --footer-gradient: linear-gradient(
+    135deg,
+    #475569 0%,
+    #64748b 50%,
+    #3b82f6 100%
+  );
   --footer-accent: #14b8a6;
   --footer-text-primary: #ffffff;
   --footer-text-secondary: rgba(255, 255, 255, 0.8);
@@ -421,22 +479,29 @@ h6,
 }
 
 .footer-modern::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, 
-    var(--footer-accent) 0%, 
-    var(--sidebar-hover-emerald) 50%, 
-    var(--footer-accent) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--footer-accent) 0%,
+    var(--sidebar-hover-emerald) 50%,
+    var(--footer-accent) 100%
+  );
   animation: shimmer 3s ease-in-out infinite;
 }
 
 @keyframes shimmer {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .footer-link {
@@ -448,7 +513,7 @@ h6,
 }
 
 .footer-link::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -477,7 +542,7 @@ h6,
 }
 
 .footer-heading::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -510,12 +575,12 @@ h6,
     text-align: center;
     margin-bottom: 2rem;
   }
-  
+
   .footer-heading::after {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .footer-logo-section {
     justify-content: center;
   }
@@ -588,7 +653,7 @@ h6,
   border-radius: 1.5rem;
   padding: 2.5rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1),
-              0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -596,7 +661,7 @@ h6,
 .profile-glass-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15),
-              0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 }
 
 /* Card Header with Avatar */
@@ -723,7 +788,12 @@ h6,
 .profile-divider {
   border: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.1),
+    transparent
+  );
   margin: 2rem 0;
 }
 
@@ -1414,7 +1484,7 @@ h6,
 
 /* Ripple Effect */
 .signup-btn-gradient::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1450,7 +1520,7 @@ h6,
 }
 
 .signup-login-link a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -1480,7 +1550,11 @@ h6,
 }
 
 .signup-alert.error {
-  background: linear-gradient(135deg, rgba(252, 129, 129, 0.95) 0%, rgba(245, 101, 101, 0.95) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(252, 129, 129, 0.95) 0%,
+    rgba(245, 101, 101, 0.95) 100%
+  );
   color: white;
   box-shadow: 0 4px 12px rgba(245, 101, 101, 0.3);
   font-weight: 500;
@@ -1768,7 +1842,7 @@ h6,
 
 /* Ripple Effect */
 .login-btn-gradient::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1806,7 +1880,7 @@ h6,
 }
 
 .login-signup-link a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -1836,7 +1910,11 @@ h6,
 }
 
 .login-alert.error {
-  background: linear-gradient(135deg, rgba(252, 129, 129, 0.95) 0%, rgba(245, 101, 101, 0.95) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(252, 129, 129, 0.95) 0%,
+    rgba(245, 101, 101, 0.95) 100%
+  );
   color: white;
   box-shadow: 0 4px 12px rgba(245, 101, 101, 0.3);
   font-weight: 500;
@@ -1906,4 +1984,40 @@ h6,
   .login-title {
     font-size: 1.5rem;
   }
+}
+
+/* Custom Floating Label for Date/Select Inputs */
+.floating-label-group .form-control {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
+  height: 58px; /* Match standard Bootstrap floating label height */
+}
+
+.floating-label-group .form-control::placeholder {
+  color: transparent;
+}
+
+.floating-label-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1rem 0.75rem;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+  color: rgba(33, 37, 41, 0.65); /* Bootstrap secondary text color */
+  z-index: 5; /* Ensure label is above input */
+}
+
+.floating-label-group .form-control:focus ~ label,
+.floating-label-group .form-control:not(:placeholder-shown) ~ label {
+  opacity: 0.85;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+/* Ensure the label sits on top of the input's background but below the text */
+.floating-label-group {
+  position: relative;
 }

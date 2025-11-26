@@ -1,0 +1,480 @@
+open supabase\.temp\profile: The system cannot find the file specified.
+Supabase CLI 2.58.5
+Using profile: supabase (supabase.co)
+Loading project ref from file: supabase\.temp\project-ref
+Starting database...
+2025/11/23 15:48:32 PG Send: {"Type":"StartupMessage","ProtocolVersion":196608,"Parameters":{"database":"postgres","user":"postgres"}}
+2025/11/23 15:48:32 PG Recv: {"Type":"AuthenticationSASL","AuthMechanisms":["SCRAM-SHA-256"]}
+2025/11/23 15:48:32 PG Send: {"Type":"SASLInitialResponse","AuthMechanism":"SCRAM-SHA-256","Data":"n,,n=,r=eWtNDLtSRyTBsvdgm6XAbUzT"}
+2025/11/23 15:48:32 PG Recv: {"Type":"AuthenticationSASLContinue","Data":"r=eWtNDLtSRyTBsvdgm6XAbUzTPbqoNRuggqDa/nopyKI1qBjp,s=NfaQTouMLT8sdY5O8L0ZlA==,i=4096"}
+2025/11/23 15:48:32 PG Send: {"Type":"SASLResponse","Data":"c=biws,r=eWtNDLtSRyTBsvdgm6XAbUzTPbqoNRuggqDa/nopyKI1qBjp,p=A6SCLonNHk6FVxCIYdQRgV1Xv4JduO7j9LoPAilnVM4="}
+2025/11/23 15:48:32 PG Recv: {"Type":"AuthenticationSASLFinal","Data":"v=dtQMsjB3OC7LO7QyIAPje0xz7FFxh5Khx0cCnCUDhAY="}
+2025/11/23 15:48:32 PG Recv: {"Type":"AuthenticationOK"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"in_hot_standby","Value":"off"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"integer_datetimes","Value":"on"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"TimeZone","Value":"UTC"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"IntervalStyle","Value":"postgres"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"is_superuser","Value":"off"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"application_name","Value":""}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"default_transaction_read_only","Value":"off"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"scram_iterations","Value":"4096"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"DateStyle","Value":"ISO, MDY"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"standard_conforming_strings","Value":"on"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"session_authorization","Value":"postgres"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"client_encoding","Value":"UTF8"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"server_version","Value":"17.6"}
+2025/11/23 15:48:32 PG Recv: {"Type":"ParameterStatus","Name":"server_encoding","Value":"UTF8"}
+2025/11/23 15:48:32 PG Recv: {"Type":"BackendKeyData","ProcessID":217,"SecretKey":860972561}
+2025/11/23 15:48:32 PG Recv: {"Type":"ReadyForQuery","TxStatus":"I"}
+Initialising schema...
++ ulimit -n
++ '[' '!' -z '' ']'
++ export ERL_CRASH_DUMP=/tmp/erl_crash.dump
++ ERL_CRASH_DUMP=/tmp/erl_crash.dump
++ '[' false = true ']'
++ [[ -n '' ]]
++ echo 'Running migrations'
++ sudo -E -u nobody /app/bin/migrate
++ '[' true = true ']'
++ echo 'Seeding selfhosted Realtime'
++ sudo -E -u nobody /app/bin/realtime eval 'Realtime.Release.seeds(Realtime.Repo)'
+[os_mon] memory supervisor port (memsup): Erlang has closed
+[os_mon] cpu supervisor port (cpu_sup): Erlang has closed
++ echo 'Starting Realtime'
++ ulimit -n
++ exec /app/bin/realtime eval '{:ok, _} = Application.ensure_all_started(:realtime)
+{:ok, _} = Realtime.Tenants.health_check("realtime-dev")'
+[os_mon] memory supervisor port (memsup): Erlang has closed
+[os_mon] cpu supervisor port (cpu_sup): Erlang has closed
+Seeding globals from roles.sql...
+WARN: no files matched pattern: supabase/seed.sql
+2025/11/23 15:48:42 PG Send: {"Type":"Terminate"}
+Starting containers...
+WARNING: Analytics on Windows requires Docker daemon exposed on tcp://localhost:2375.
+See https://supabase.com/docs/guides/local-development/cli/getting-started?queryGroups=platform&platform=windows#running-supabase-locally for more details.
+Waiting for health checks...
+2025/11/23 15:49:00 HTTP GET: http://127.0.0.1:54321/storage/v1/bucket
+2025/11/23 15:49:00 HTTP HEAD: http://127.0.0.1:54321/rest-admin/v1/ready
+2025/11/23 15:49:00 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:01 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:02 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:03 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:04 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:05 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:06 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:07 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:08 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:09 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:10 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:11 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:12 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:13 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:14 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:15 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:16 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:17 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:18 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:19 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:20 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:21 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:22 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:23 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:24 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:25 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:26 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:27 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:28 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:29 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+2025/11/23 15:49:30 HTTP HEAD: http://127.0.0.1:54321/functions/v1/_internal/health
+supabase_edge_runtime_Mushak18.1 container logs:
+DEBUG No .npmrc file found
+DEBUG Finished config loading.
+DEBUG Opening cache /root/.cache/deno/dep_analysis_cache_v2...
+DEBUG Opening cache /root/.cache/deno/node_analysis_cache_v2...
+DEBUG Opening cache /root/.cache/deno/dep_analysis_cache_v2...
+DEBUG Opening cache /root/.cache/deno/node_analysis_cache_v2...
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: file:///root/index.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std/http/status.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std/http/status.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std/http/status.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std/path/posix/mod.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std/path/posix/mod.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std/path/posix/mod.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/index.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/index.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/index.ts
+DEBUG No cached session for DnsName("deno.land")
+DEBUG Not resuming any session
+DEBUG No cached session for DnsName("deno.land")
+DEBUG Not resuming any session
+DEBUG No cached session for DnsName("deno.land")
+DEBUG Not resuming any session
+DEBUG Using ciphersuite TLS13_AES_256_GCM_SHA384
+DEBUG Not resuming
+DEBUG TLS1.3 encrypted extensions: [Protocols([ProtocolName(6832)]), ServerNameAck]
+DEBUG ALPN protocol is Some(b"h2")
+DEBUG Using ciphersuite TLS13_AES_256_GCM_SHA384
+DEBUG Not resuming
+DEBUG TLS1.3 encrypted extensions: [Protocols([ProtocolName(6832)]), ServerNameAck]
+DEBUG ALPN protocol is Some(b"h2")
+DEBUG Sending warning alert CloseNotify
+DEBUG Using ciphersuite TLS13_AES_256_GCM_SHA384
+DEBUG Not resuming
+DEBUG TLS1.3 encrypted extensions: [Protocols([ProtocolName(6832)]), ServerNameAck]
+DEBUG ALPN protocol is Some(b"h2")
+DEBUG Sending warning alert CloseNotify
+Warning Implicitly using latest version (0.224.0) for https://deno.land/std/http/status.ts
+DEBUG Redirecting to "/std@0.224.0/http/status.ts"...
+Warning Implicitly using latest version (0.224.0) for https://deno.land/std/path/posix/mod.ts
+DEBUG Redirecting to "/std@0.224.0/path/posix/mod.ts"...
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/http/status.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/http/status.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/http/status.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/mod.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/mod.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/mod.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwe/compact/decrypt.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/compact/decrypt.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/compact/decrypt.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwe/flattened/decrypt.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/flattened/decrypt.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/flattened/decrypt.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwe/general/decrypt.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/general/decrypt.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/general/decrypt.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwe/general/encrypt.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/general/encrypt.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/general/encrypt.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jws/compact/verify.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/compact/verify.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/compact/verify.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jws/flattened/verify.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/flattened/verify.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/flattened/verify.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jws/general/verify.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/general/verify.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/general/verify.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwt/verify.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/verify.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/verify.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwt/decrypt.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/decrypt.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/decrypt.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwe/compact/encrypt.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/compact/encrypt.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/compact/encrypt.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwe/flattened/encrypt.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/flattened/encrypt.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwe/flattened/encrypt.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jws/compact/sign.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/compact/sign.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/compact/sign.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jws/flattened/sign.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/flattened/sign.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/flattened/sign.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jws/general/sign.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/general/sign.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jws/general/sign.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwt/sign.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/sign.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/sign.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwt/encrypt.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/encrypt.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/encrypt.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwk/thumbprint.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwk/thumbprint.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwk/thumbprint.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwk/embedded.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwk/embedded.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwk/embedded.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwks/local.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwks/local.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwks/local.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwks/remote.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwks/remote.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwks/remote.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwt/unsecured.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/unsecured.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/unsecured.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/key/export.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/key/export.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/key/export.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/key/import.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/key/import.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/key/import.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/util/decode_protected_header.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/util/decode_protected_header.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/util/decode_protected_header.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/util/decode_jwt.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/util/decode_jwt.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/util/decode_jwt.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/util/errors.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/util/errors.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/util/errors.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/key/generate_key_pair.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/key/generate_key_pair.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/key/generate_key_pair.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/key/generate_secret.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/key/generate_secret.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/key/generate_secret.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/util/base64url.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/util/base64url.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/util/base64url.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/basename.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/basename.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/basename.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/constants.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/constants.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/constants.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/dirname.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/dirname.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/dirname.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/extname.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/extname.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/extname.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/format.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/format.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/format.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/from_file_url.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/from_file_url.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/from_file_url.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/is_absolute.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/is_absolute.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/is_absolute.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/join.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/join.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/join.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/normalize.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/normalize.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/normalize.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/parse.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/parse.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/parse.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/relative.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/relative.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/relative.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/resolve.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/resolve.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/resolve.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/to_file_url.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/to_file_url.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/to_file_url.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/to_namespaced_path.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/to_namespaced_path.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/to_namespaced_path.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/common.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/common.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/common.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_interface.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_interface.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_interface.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/glob_to_regexp.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/glob_to_regexp.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/glob_to_regexp.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/is_glob.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/is_glob.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/is_glob.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/join_globs.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/join_globs.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/join_globs.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/normalize_glob.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/normalize_glob.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/normalize_glob.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/buffer_utils.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/buffer_utils.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/buffer_utils.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/base64url.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/base64url.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/base64url.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/decrypt.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/decrypt.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/decrypt.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/zlib.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/zlib.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/zlib.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/is_disjoint.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/is_disjoint.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/is_disjoint.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/is_object.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/is_object.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/is_object.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/decrypt_key_management.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/decrypt_key_management.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/decrypt_key_management.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/cek.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/cek.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/cek.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/validate_crit.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/validate_crit.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/validate_crit.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/validate_algorithms.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/validate_algorithms.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/validate_algorithms.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/encrypt_key_management.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/encrypt_key_management.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/encrypt_key_management.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/verify.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/verify.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/verify.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/check_key_type.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/check_key_type.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/check_key_type.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/jwt_claims_set.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/jwt_claims_set.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/jwt_claims_set.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/encrypt.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/encrypt.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/encrypt.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/iv.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/iv.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/iv.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/sign.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/sign.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/sign.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/jwt/produce.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/produce.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/jwt/produce.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/digest.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/digest.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/digest.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/fetch_jwks.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/fetch_jwks.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/fetch_jwks.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/env.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/env.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/env.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/asn1.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/asn1.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/asn1.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/key_to_jwk.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/key_to_jwk.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/key_to_jwk.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/jwk_to_key.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/jwk_to_key.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/jwk_to_key.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/generate.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/generate.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/generate.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/basename.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/basename.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/basename.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/strip_trailing_separators.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/strip_trailing_separators.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/strip_trailing_separators.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/posix/_util.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/_util.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/posix/_util.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/dirname.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/dirname.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/dirname.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/constants.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/constants.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/constants.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/assert_path.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/assert_path.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/assert_path.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/format.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/format.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/format.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/from_file_url.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/from_file_url.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/from_file_url.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/normalize.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/normalize.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/normalize.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/normalize_string.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/normalize_string.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/normalize_string.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/relative.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/relative.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/relative.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/to_file_url.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/to_file_url.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/to_file_url.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/common.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/common.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/common.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/_common/glob_to_reg_exp.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/glob_to_reg_exp.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/_common/glob_to_reg_exp.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/std@0.224.0/path/is_glob.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/std@0.224.0/path/is_glob.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/std@0.224.0/path/is_glob.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/check_iv_length.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/check_iv_length.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/check_iv_length.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/check_cek_length.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/check_cek_length.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/check_cek_length.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/timing_safe_equal.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/timing_safe_equal.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/timing_safe_equal.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/webcrypto.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/webcrypto.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/webcrypto.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/crypto_key.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/crypto_key.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/crypto_key.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/invalid_key_input.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/invalid_key_input.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/invalid_key_input.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/is_key_like.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/is_key_like.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/is_key_like.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/aeskw.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/aeskw.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/aeskw.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/ecdhes.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/ecdhes.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/ecdhes.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/pbes2kw.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/pbes2kw.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/pbes2kw.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/rsaes.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/rsaes.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/rsaes.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/aesgcmkw.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/aesgcmkw.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/aesgcmkw.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/random.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/random.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/random.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/subtle_dsa.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/subtle_dsa.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/subtle_dsa.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/check_key_length.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/check_key_length.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/check_key_length.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/get_sign_verify_key.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/get_sign_verify_key.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/get_sign_verify_key.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/epoch.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/epoch.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/epoch.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/secs.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/secs.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/secs.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/format_pem.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/format_pem.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/format_pem.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/bogus.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/bogus.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/bogus.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/lib/check_p2s.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/check_p2s.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/lib/check_p2s.ts
+DEBUG FileFetcher::fetch_no_follow_with_options - specifier: https://deno.land/x/jose@v4.13.1/runtime/subtle_rsaes.ts
+DEBUG FileFetcher::fetch_remote_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/subtle_rsaes.ts
+DEBUG FileFetcher::fetch_cached_no_follow - specifier: https://deno.land/x/jose@v4.13.1/runtime/subtle_rsaes.ts
+DEBUG Building vfs with root '/'
+DEBUG Sending warning alert CloseNotify
+DEBUG Opening cache /root/.cache/deno/node_analysis_cache_v2...
+DEBUG edge-runtime is listening on 0.0.0.0:8081
+Functions config: {}
+Serving functions on http://127.0.0.1:54321/functions/v1/<function-name>
+Using supabase-edge-runtime-1.69.23 (compatible with Deno v2.1.4)
+Stopping containers...
+Pruned containers: [6b6cfffb7ad0d6deeaa9fca45615bb8255a5210e9b9a1129908cfecbbb1db0dc 2cab0904e4cd4f299c5f7b87bdcb26ff8aa2de5b395d83264326b0ab67a97a5a 01f39f472d539804313735ce50910017ba1c4db576682e32ad41e1eb5512f279 84d9035541576ee1d6a5a4363ec2a6fc332ac68487a8ea2a89f641c3201a6525 565747d33c301895fa176b7484a36e70d23d81809b153120c7c90de4f2633581 2217cd2df64a668a9056b93ee84ceee130cabbe159ca079a3a33bec0e2bc2fc7 5b184ac0ad28a4f6ca8f4f23b9d5383023835f57387f34eff9e86546dcae182e 84bebce7638e5aebf4021dac64d7723a47b8df50780b30222f0b0e4e56b0e7ec f1e97c7d73021947e6850663f59ca330f480fc98dd677acc44b92c68296fd17b cc2768412729fb2348d1621f4e0acbc815f5372421e8d0f860fd731cd677c1fc b5d97bdf829f94f606c889045a5847a53f33cfb5bac9947a7cbb3ecfb4a27470]
+Pruned volumes: [supabase_db_Mushak18.1 supabase_config_Mushak18.1 supabase_storage_Mushak18.1]
+Pruned network: [supabase_network_Mushak18.1]
+Error status 500: 
